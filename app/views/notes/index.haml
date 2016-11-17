@@ -1,1 +1,9 @@
-%h1 Hello bitch
+%h1 All Your Notes
+
+= link_to "New Note", new_note_path
+- @notes.each do |note|
+  .note
+    = link_to note do
+      %h2= note.title
+    %p= truncate(note.content, length: 30)
+

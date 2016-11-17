@@ -1,4 +1,6 @@
 .note
   %h2.title= @note.title
   %p.content= @note.content
-  
+
+= link_to "Edit", edit_note_path(@note)
+= link_to "All notes", notes_path
