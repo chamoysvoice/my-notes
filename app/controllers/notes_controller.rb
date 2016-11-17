@@ -1,6 +1,8 @@
 class NotesController < ApplicationController
   before_action :find_note, only: [:show, :edit, :update, :destroy]
-   
+  before_action :authenticate_user!
+  before_action :set_current_user
+
   def index
     @notes = Note.all
   end
@@ -45,5 +47,9 @@ class NotesController < ApplicationController
 
   def note_params
     params.require(:note).permit(:title, :content)
+  end
+
+  def set_current_user
+    Note.current_user = current_user
   end
 end
