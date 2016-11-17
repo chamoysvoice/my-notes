@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg', '0.19.0'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
+gem 'devise', '~> 4.2'
 
 group :development, :test do
   gem 'pry'
@@ -19,10 +20,8 @@ end
 group :development do
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
-
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
