@@ -2,10 +2,14 @@
 %html
   %head
     %title My Notes
+    %meta{name: 'viewport', content: 'width=device-width, inital-scale=1, shrink-to-fit=no'}
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %nav.navbar.navbar-full.navbar-dark.bg-primary
+      = link_to 'My Notes', root_path, class: 'navbar-brand'
+
     %p.notice= notice
     %p.alert= alert
     = yield
