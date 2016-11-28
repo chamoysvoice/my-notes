@@ -12,6 +12,7 @@ gem 'pg', '0.19.0'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'devise', '~> 4.2'
+gem 'bootstrap', '~> 4.0.0.alpha5'
 
 group :development, :test do
   gem 'pry'
