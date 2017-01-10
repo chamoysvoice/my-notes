@@ -1,3 +1,39 @@
-// Place all the styles related to the landing controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+    background-image: image-url('header.jpg');
+    background-size: cover;
+    color : #FFF;
+    min-height: 100%;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+header .content {
+    padding: 0 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+header .content .inner {
+    h1 {
+        font-size: 80px;
+        font-transform: uppercase;
+    }
+
+    hr {
+        border-color: $primary-color;
+        border-width: 3px;
+        margin: 30 auto;
+        max-width: 50px;
+    }
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 60%;
+        font-size: 28px;
+    }
+}

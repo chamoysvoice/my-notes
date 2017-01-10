@@ -7,7 +7,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %nav.navbar.navbar-full.navbar-dark.bg-primary
+    %nav.navbar.navbar-full.navbar-dark
       = link_to 'My Notes', root_path, class: 'navbar-brand'
       %ul.nav.navbar-nav.float-xs-right
         - if user_signed_in?
@@ -20,7 +20,4 @@
             = link_to 'Log in', new_user_session_path, class: 'nav-link'
           %li.nav-item
             = link_to 'Register', new_user_registration_path, class: 'nav-link'
-    %p.notice= notice
-    %p.alert= alert
-    .container
-      = yield
+    = yield
